@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/home/serialhex/src/evil_scheme"
+			"path": "/home/serialhex/src/evil_scheme",
+			"file_exclude_patterns": ["*.o", "*.hi"]
 		}
 	]
 }
