@@ -38,7 +38,8 @@ parseAtom  = do first <- letter <|> symbol
                             _    -> Atom atom
 
 parseNumber :: Parser LispVal
-parseNumber = liftM (Number . read) $ many1 digit
+parseNumber  = do many1 digit
+                  Number . read
 
 parseExpr :: Parser LispVal
 parseExpr = parseAtom
