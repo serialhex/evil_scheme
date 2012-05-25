@@ -24,7 +24,7 @@ symbol = oneOf "!#$%&|*+-/:<=>?@^_~"
 readExpr :: String -> String
 readExpr input = case parse parseExpr "lisp" input of
   Left err -> "No match: " ++ show err
-  Right val -> "Found:" ++ show val
+  Right val -> "Found " ++ show val
 
 spaces :: Parser ()
 spaces = skipMany1 space
