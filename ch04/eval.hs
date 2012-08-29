@@ -2,6 +2,7 @@ module Main where
 import System.Environment
 import Text.ParserCombinators.Parsec hiding (spaces)
 import Control.Monad
+import Control.Monad.Error
 
 showVal :: LispVal -> String
 showVal (String contents)       = "\"" ++ contents ++ "\""
